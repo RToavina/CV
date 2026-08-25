@@ -73,6 +73,8 @@ button{ font-family:inherit; cursor:pointer; }
   width:32px; height:32px; display:grid; place-items:center;
   border-radius:3px;
 }
+.nav__logo-mark{ transition:transform .25s ease, background .25s ease, color .25s ease; }
+.nav__logo:hover .nav__logo-mark{ transform:rotate(-6deg) scale(1.06); background:var(--amber-500); color:var(--ink-900); }
 .nav__logo-text{ font-family:var(--font-display); font-weight:600; font-size:1.05rem; }
 .nav__links{ display:flex; gap:28px; }
 .nav__links a{
@@ -382,12 +384,23 @@ button{ font-family:inherit; cursor:pointer; }
 /* ==========================================================================
    RÉVÉLATION AU SCROLL
    ========================================================================== */
-.reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+.hero__content{ animation:hero-enter .8s cubic-bezier(.22,1,.36,1) both; }
+.hero__aside{ animation:hero-enter .8s .14s cubic-bezier(.22,1,.36,1) both; }
+.card:nth-child(2){ transition-delay:.08s; }
+.card:nth-child(3){ transition-delay:.16s; }
+.card:nth-child(4){ transition-delay:.24s; }
+.reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1); }
 .reveal.is-visible{ opacity:1; transform:translateY(0); }
 
+@keyframes hero-enter{
+  from{ opacity:0; transform:translateY(24px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
 @media (prefers-reduced-motion: reduce){
-  .reveal{ opacity:1; transform:none; transition:none; }
+  .reveal,.hero__content,.hero__aside{ opacity:1; transform:none; animation:none; transition:none; }
   html{ scroll-behavior:auto; }
   .btn:hover{ transform:none; }
   .card:hover{ transform:none; }
+  .nav__logo-mark{ transition:none; }
 }
