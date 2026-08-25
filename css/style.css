@@ -389,7 +389,7 @@ button{ font-family:inherit; cursor:pointer; }
 .card:nth-child(2){ transition-delay:.08s; }
 .card:nth-child(3){ transition-delay:.16s; }
 .card:nth-child(4){ transition-delay:.24s; }
-.reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1); }
+html.js-enabled .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1); }
 .reveal.is-visible{ opacity:1; transform:translateY(0); }
 
 @keyframes hero-enter{
