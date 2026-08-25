@@ -37,10 +37,29 @@ pointillé), puis supprimez le bandeau orange en haut de page (bloc
 | À propos | Paragraphe de présentation, niveaux enseignés, langues |
 | Compétences | Intitulés et niveaux (barres en `%`), tags libres |
 | Parcours | Postes, dates, établissements, missions — dupliquez un bloc `trace__node` pour ajouter une ligne |
-| Projets | Titre, description, tags, lien — dupliquez un bloc `<article class="card">` pour ajouter un projet |
+| Projets pédagogiques | Titre, description, tags, lien — dupliquez un bloc `<article class="card">` pour ajouter un projet |
+| Projets personnels | Titre, description, tags, lien — ajoutez les projets personnels dans la section `#projets-personnels` |
 | Contact | E-mail, téléphone, ville + configuration Formspree (étape 3) |
 
-## 2. Ajouter votre photo et votre CV en PDF
+## 2. Projets disponibles
+
+La section **Projets pédagogiques** présente actuellement :
+
+- **PRJ-01 — Projet interdisciplinaire « Le Petit Prince »** : page HTML et téléchargement du jeu Scratch au format `.mblock`.
+- **PRJ-02 — Éclairage solaire autonome** : galerie des photos du projet, ouverte dans un nouvel onglet.
+- **PRJ-03 — Semaine de sensibilisation à l'IA** : carte à compléter avec le lien du projet.
+
+La section **Projets personnels** contient :
+
+- **PRJ-PERSO-01 — Banque d'appréciations** : application web disponible dans `Projet_appréciation/appreciation.html`.
+
+Les liens des projets qui disposent d'une page dédiée s'ouvrent dans un nouvel onglet avec `target="_blank"` et `rel="noopener"`.
+
+### Galerie du projet panneau solaire
+
+La page `projet-panneau-solaire.html` affiche les photos du dossier `IMG/Projet panneau solaire/` sous forme de carrousel. Pour ajouter une photo, placez un fichier `.jpg` dans ce dossier et ajoutez son nom dans le tableau `photos` de la page.
+
+## 3. Ajouter votre photo et votre CV en PDF
 
 1. Placez votre photo (idéalement carrée, ≥ 500×500 px) dans
    `assets/images/photo.jpg`. Si le fichier est absent, le site affiche
@@ -48,7 +67,7 @@ pointillé), puis supprimez le bandeau orange en haut de page (bloc
 2. Placez votre CV au format PDF dans `assets/cv.pdf` (même nom de fichier,
    sinon mettez à jour les liens `href="assets/cv.pdf"` dans `index.html`).
 
-## 3. Rendre le formulaire de contact fonctionnel (Formspree)
+## 4. Rendre le formulaire de contact fonctionnel (Formspree)
 
 1. Créez un compte gratuit sur [formspree.io](https://formspree.io).
 2. Créez un nouveau formulaire ("New Form"), donnez-lui votre adresse e-mail.
@@ -66,7 +85,7 @@ pointillé), puis supprimez le bandeau orange en haut de page (bloc
 section Contact — les visiteurs pourront vous écrire directement depuis leur
 messagerie, sans configuration supplémentaire.
 
-## 4. Aperçu en local
+## 5. Aperçu en local
 
 Aucune installation nécessaire : ouvrez simplement `index.html` dans votre
 navigateur. Pour un rendu identique à celui en ligne (recommandé), lancez un
@@ -78,7 +97,7 @@ python3 -m http.server 8000
 # puis ouvrez http://localhost:8000
 ```
 
-## 5. Déployer sur GitHub Pages
+## 6. Déployer sur GitHub Pages
 
 1. Créez un nouveau dépôt GitHub, par exemple `mon-cv`.
 2. Poussez tous les fichiers de ce dossier à la racine du dépôt :
@@ -103,13 +122,18 @@ disponible directement à la racine de ce domaine, sans `/mon-cv/` à la fin.
 
 ```
 portfolio-cv/
-├── index.html          → contenu du site (toutes les sections)
-├── css/style.css        → design (couleurs, typographies, mise en page)
-├── js/script.js         → menu mobile, formulaire, animations
-├── assets/
-│   ├── images/photo.jpg → VOTRE PHOTO (à ajouter)
-│   └── cv.pdf            → VOTRE CV EN PDF (à ajouter)
-└── README.md            → ce guide
+├── index.html                                      → contenu du CV et des projets
+├── style.css                                       → design du CV
+├── script.js                                       → menu mobile, formulaire et animations
+├── projet-panneau-solaire.html                     → galerie du PRJ-02
+├── IMG/Projet panneau solaire/                     → photos du PRJ-02
+├── Projet Petit Prince/                            → projet pédagogique PRJ-01
+│   ├── Projet Petit Prince.mblock                 → jeu Scratch
+│   └── carte-petit-prince/                        → pages HTML du projet
+├── Projet_appréciation/                            → projet personnel
+│   └── appreciation.html                           → banque d'appréciations
+├── assets/                                         → photo et CV PDF, si ajoutés
+└── README.md                                       → ce guide
 ```
 
 ## Design
