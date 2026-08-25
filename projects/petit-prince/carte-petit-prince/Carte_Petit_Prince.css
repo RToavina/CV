@@ -1,0 +1,365 @@
+:root {
+  --bg: #0a0f2d;
+  --star: #ffd166;
+  --accent: #ef476f;
+  --planet: #06d6a0;
+  --text: #f1f5ff;
+  --panel: #0f1540cc;
+  --muted: #9fb1ff;
+  --line: #2e3a86;
+  --line-active: #7ac9ff;
+  --chip: #25327a;
+  --chip-b: #2f3e8d;
+  --btn: #2a3a91;
+  --btn-b: #3a4ac0;
+  --btn2: #22306f;
+  --btn2-b: #2b3c8e;
+  --current-theme: #06d6a0; /* Couleur par défaut */
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: radial-gradient(1200px 600px at 70% 10%, #17235c, var(--bg));
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+/* Thèmes dynamiques basés sur la planète sélectionnée */
+body.theme-B612 {
+  --current-theme: #ffd166;
+  --btn: #b08930;
+  --btn-b: #d4a536;
+  --btn2: #8a6c25;
+  --btn2-b: #a8852e;
+  --line-active: #ffd166;
+}
+
+body.theme-Roi {
+  --current-theme: #06d6a0;
+  --btn: #2a7a64;
+  --btn-b: #06d6a0;
+  --btn2: #1f5e4d;
+  --btn2-b: #058c6d;
+  --line-active: #06d6a0;
+}
+
+body.theme-Vaniteux {
+  --current-theme: #ff6f61;
+  --btn: #a84a41;
+  --btn-b: #ff6f61;
+  --btn2: #823a33;
+  --btn2-b: #cc584c;
+  --line-active: #ff6f61;
+}
+
+body.theme-Buveur {
+  --current-theme: #444444;
+  --btn: #2c2c2c;
+  --btn-b: #444444;
+  --btn2: #222222;
+  --btn2-b: #363636;
+  --line-active: #7ac9ff;
+}
+
+body.theme-Businessman {
+  --current-theme: #7e57c2;
+  --btn: #554182;
+  --btn-b: #7e57c2;
+  --btn2: #443468;
+  --btn2-b: #6645a0;
+  --line-active: #7e57c2;
+}
+
+body.theme-Allumeur {
+  --current-theme: #ff9800;
+  --btn: #a86400;
+  --btn-b: #ff9800;
+  --btn2: #855000;
+  --btn2-b: #cc7a00;
+  --line-active: #ff9800;
+}
+
+body.theme-Geographe {
+  --current-theme: #2196f3;
+  --btn: #1665b3;
+  --btn-b: #2196f3;
+  --btn2: #124f8a;
+  --btn2-b: #1b80d4;
+  --line-active: #2196f3;
+}
+
+body.theme-Terre {
+  --current-theme: #4caf50;
+  --btn: #327935;
+  --btn-b: #4caf50;
+  --btn2: #28612a;
+  --btn2-b: #3d8c40;
+  --line-active: #4caf50;
+}
+
+/* Appliquer la couleur du thème aux éléments interactifs */
+.btn {
+  background: linear-gradient(180deg, var(--btn), var(--btn-b));
+  border-color: var(--btn-b);
+}
+
+.btn.secondary {
+  background: linear-gradient(180deg, var(--btn2), var(--btn2-b));
+  border-color: var(--btn2-b);
+}
+
+.route line.active {
+  stroke: var(--line-active);
+}
+
+.planet.recent circle {
+  stroke: var(--current-theme);
+}
+
+.chip {
+  background-color: color-mix(in srgb, var(--current-theme) 20%, transparent);
+  border-color: color-mix(in srgb, var(--current-theme) 40%, transparent);
+  color: var(--current-theme);
+}
+
+/* -------- Splash screen -------- */
+.splash {
+  position: fixed;
+  inset: 0;
+  background: #0a0f2d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.splash.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.splash .logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+  background: #141c4a;
+  border: 1px solid #243078;
+  box-shadow: 0 0 40px #1a2470 inset, 0 0 60px #14205e;
+}
+.splash h1 {
+  margin: 16px 0 6px 0;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+}
+.splash .muted {
+  color: #a9bfff;
+  font-size: 13px;
+}
+.spinner {
+  margin-top: 16px;
+  width: 56px;
+  height: 56px;
+  border: 4px solid #2b3a88;
+  border-top-color: #7ac9ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Carte */
+.mapWrap {
+  position: relative;
+  overflow: hidden;
+}
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- CORRECTION ICI ---
+       On ne force plus un `fill` global : cela empêchait les circle qui
+       ont un `fill="url(#...)"` (dégradé) d'apparaître correctement.
+    */
+.planet circle {
+  stroke: #0e1846;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 6px #05a07f88);
+}
+/* applique la couleur par défaut uniquement si le cercle n'a PAS de fill explicite */
+.planet circle:not([fill]) {
+  fill: var(--planet);
+}
+
+.planet text {
+  fill: #e9f6ff;
+  font-size: 12px;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #071035;
+}
+.planet {
+  cursor: pointer;
+  outline: none;
+}
+.planet:focus circle {
+  stroke: #9fe7ff;
+  stroke-width: 3;
+}
+.planet.visited circle {
+  fill: #4de6b8;
+}
+.planet.recent circle {
+  stroke-width: 3;
+}
+
+.route line {
+  stroke: var(--line);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.6;
+}
+.route line.active {
+  opacity: 1;
+  filter: drop-shadow(0 0 6px var(--line-active));
+}
+
+/* Fiche droite */
+.infoHead {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  #infoTitle {
+    margin: 0;
+  }
+}
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.chip {
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 11px;
+}
+.btnRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.btn {
+  color: #eaf1ff;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: all 0.3s ease;
+}
+.btn.secondary {
+  background: linear-gradient(180deg, var(--btn2), var(--btn2-b));
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn.danger {
+  background: #7a2230;
+  border-color: #9a2c3c;
+  color: #ffeef0;
+}
+.gallery {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+.gallery .view {
+  border: 1px solid #2a356f;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0c143a;
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+}
+.gallery .view img {
+  max-width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  display: block;
+}
+.gallery .caption {
+  color: #cfe2ff;
+  font-size: 12px;
+  text-align: center;
+}
+.gallery .nav {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.empty {
+  color: #c8d6ff;
+}
+.hint {
+  color: #9fb1ff;
+  font-size: 12px;
+}
+footer {
+  color: #99a8e6;
+  font-size: 11px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+header {
+  padding: 16px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 16px;
+}
+header h1 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.badge {
+  background: var(--chip);
+  border: 1px solid var(--chip-b);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 16px;
+  padding: 0 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.panel {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+}

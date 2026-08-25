@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Le Petit Prince — CDFM</title>
+    <meta name="color-scheme" content="dark light" />
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+
+    <script src="index.js"></script>
+
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <div class="splash" id="splash" aria-hidden="true">
+      <div class="logo">🪐</div>
+      <h1>Le Petit Prince</h1>
+      <div class="hint">Chargement…</div>
+      <div class="spinner" aria-label="Chargement"></div>
+    </div>
+
+    <header class="panel">
+      <h1>Le Petit Prince — Accueil</h1>
+      <div class="topbar">
+        <span class="badge">Projet pédagogique CDFM</span>
+        <div class="themeRow">
+          <label for="themeSel" class="hint">Thème</label>
+          <select id="themeSel" class="sel" title="Choisir un thème">
+            <option value="Roi">Roi</option>
+            <option value="B612">B612</option>
+            <option value="Vaniteux">Vaniteux</option>
+            <option value="Buveur">Buveur</option>
+            <option value="Businessman">Businessman</option>
+            <option value="Allumeur">Allumeur</option>
+            <option value="Geographe">Géographe</option>
+            <option value="Terre">Terre</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="grid">
+          <!-- Carte -->
+          <article
+            class="card"
+            id="cardCarte"
+            tabindex="0"
+            aria-label="Carte des voyages"
+          >
+            <div class="mini">
+              <span class="dot"></span>
+              <strong>Voyages du Petit Prince 🗺️ Carte interactive</strong>
+            </div>
+            <p>
+              Explore la carte, suis l’itinéraire et affiche la fiche de chaque
+              planète avec sa galerie.
+            </p>
+            <div class="btnRow">
+              <button class="btn" data-open="Carte_Petit_Prince.html">
+                Ouvrir la carte
+              </button>
+            </div>
+          </article>
+
+          <!-- Personnages -->
+          <article
+            class="card"
+            id="cardPerso"
+            tabindex="0"
+            aria-label="Scènes et personnages"
+          >
+            <div class="mini">
+              <span class="dot"></span>
+              <strong>Scènes & personnages 🌍 Diaporama</strong>
+            </div>
+            <p>
+              Parcours les personnages, lis les répliques marquantes et fais
+              défiler les images.
+            </p>
+            <div class="btnRow">
+              <button class="btn" data-open="Personnages_Petit_Prince.html">
+                Ouvrir personnages
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap">
+          <button class="btn" id="resumeBtn" disabled>Reprendre: —</button>
+          <button class="btn secondary" id="randomBtn">Au hasard ✨</button>
+        </div>
+
+        <p class="hint" style="margin-top: 8px">
+          Conseil: la page retient le thème choisi et le dernier module ouvert.
+          Raccourcis: 1/C pour Carte, 2/P pour Personnages, Entrée/Espace active
+          la carte ciblée.
+        </p>
+      </section>
+
+      <footer>© Projet pédagogique — M. RAZANAJATOVO A. Toavina</footer>
+    </main>
+  </body>
+</html>

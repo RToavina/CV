@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voyages du Petit Prince — Fix</title>
+    <link rel="stylesheet" href="Carte_Petit_Prince.css">
+
+  </head>
+  <body>
+
+    <script src="Carte_Petit_Prince.js"></script>
+
+    <!-- Splash screen -->
+    <div class="splash" id="splash" aria-hidden="true">
+      <div class="logo">🪐</div>
+      <h1>Voyages du Petit Prince</h1>
+      <div class="muted">Chargement de la carte et des fiches…</div>
+      <div class="spinner" aria-label="Chargement"></div>
+    </div>
+
+    <header>
+      <h1>Voyages du Petit Prince <span class="muted">— CDFM </span></h1>
+      <div class="topbar">
+        <button class="btn secondary" id="homeBtn" title="Retour à l'accueil">
+          ⟵ Accueil
+        </button>
+        <span class="badge">Astéroïde B-612 → Terre</span>
+        <span class="badge">Raccourcis: N (suivante) • P (précédente)</span>
+        <button
+          class="btn danger"
+          id="resetBtn"
+          title="Effacer la progression et les planètes visitées"
+        >
+          Réinitialiser le trajet
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel mapWrap" aria-label="Carte des planètes">
+        <svg
+          viewBox="0 0 900 520"
+          role="img"
+          aria-label="Trajet du Petit Prince"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Constellations décor -->
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+            </radialGradient>
+
+            <!-- B612 -->
+            <radialGradient id="b612Gradient" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#fff176" />
+              <stop offset="100%" stop-color="#f4c542" />
+            </radialGradient>
+
+            <!-- Terre -->
+            <radialGradient id="terreGradient" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#2196f3" />
+              <stop offset="100%" stop-color="#4caf50" />
+            </radialGradient>
+          </defs>
+
+          <g class="stars" opacity=".4">
+            <circle cx="60" cy="40" r="2" fill="url(#glow)" />
+            <circle cx="240" cy="80" r="1.8" fill="url(#glow)" />
+            <circle cx="800" cy="110" r="2" fill="url(#glow)" />
+            <circle cx="500" cy="40" r="2" fill="url(#glow)" />
+            <circle cx="720" cy="470" r="2" fill="url(#glow)" />
+            <circle cx="100" cy="460" r="1.5" fill="url(#glow)" />
+            <circle cx="70" cy="90" r="2" fill="url(#glow)" />
+            <circle cx="220" cy="80" r="1.8" fill="url(#glow)" />
+            <!-- corrigé 8300 -> 830 -->
+            <circle cx="830" cy="100" r="2" fill="url(#glow)" />
+            <circle cx="570" cy="44" r="2" fill="url(#glow)" />
+            <circle cx="795" cy="470" r="2" fill="url(#glow)" />
+            <circle cx="180" cy="460" r="1.5" fill="url(#glow)" />
+          </g>
+
+          <!-- Lignes de route (dans l'ordre) -->
+          <g class="route" id="route">
+            <line id="B612-Roi" x1="120" y1="120" x2="300" y2="160"></line>
+            <line id="Roi-Vaniteux" x1="300" y1="160" x2="460" y2="120"></line>
+            <line
+              id="Vaniteux-Buveur"
+              x1="460"
+              y1="120"
+              x2="620"
+              y2="180"
+            ></line>
+            <line
+              id="Buveur-Businessman"
+              x1="620"
+              y1="180"
+              x2="720"
+              y2="280"
+            ></line>
+            <line
+              id="Businessman-Allumeur"
+              x1="720"
+              y1="280"
+              x2="600"
+              y2="360"
+            ></line>
+            <line
+              id="Allumeur-Geographe"
+              x1="600"
+              y1="360"
+              x2="420"
+              y2="400"
+            ></line>
+            <line
+              id="Geographe-Terre"
+              x1="420"
+              y1="400"
+              x2="180"
+              y2="360"
+            ></line>
+          </g>
+
+          <!-- Planètes -->
+          <g
+            class="planet"
+            tabindex="0"
+            data-id="B612"
+            transform="translate(120,120)"
+          >
+            <circle
+              r="60"
+              fill="url(#b612Gradient)"
+              stroke="black"
+              stroke-width="2"
+            ></circle>
+            <text x="-15" y="4" fill="white" font-size="14">B-612</text>
+          </g>
+          <g
+            class="planet"
+            tabindex="0"
+            data-id="Roi"
+            transform="translate(300,160)"
+          >
+            <circle r="40"></circle>
+            <text x="-15" y="4" fill="white" font-size="14">Le Roi</text>
+          </g>
+          <g
+            class="planet"
+            tabindex="0"
+            data-id="Vaniteux"
+            transform="translate(460,120)"
+          >
+            <circle
+              r="35"
+              fill="#ff6f61"
+              stroke="black"
+              stroke-width="2"
+            ></circle>
+            <text x="-31" y="4" fill="white" font-size="14">Le Vaniteux</text>
+          </g>
+          <g
+            class="planet"
+            tabindex="0"
+            data-id="Buveur"
+            transform="translate(620,180)"
+          >
+            <circle
+              r="30"
+              fill="#444444"
+              stroke="black"
+              stroke-width="2"
+            ></circle>
+            <text x="-27" y="4" fill="white" font-size="14">Le Buveur</text>
+          </g>
+          <g
+            class="planet"
+            tabindex="0"
+            data-id="Businessman"
+            transform="translate(720,280)"
+          >
+            <circle
+              r="32"
+              fill="#7e57c2"
+              stroke="black"
+              stroke-width="2"
+            ></circle>
+            <text x="-45" y="4" fill="white" font-size="14">
+              Le Businessman
+            </text>
+          </g>
+          <g
+            class="planet"
+            tabindex="0"
+            data-id="Allumeur"
+            transform="translate(600,360)"
+          >
+            <circle
+              r="28"
+              fill="#ff9800"
+              stroke="black"
+              stroke-width="2"
+            ></circle>
+            <text x="-35" y="4" fill="white" font-size="14">L'Allumeur</text>
+          </g>
+          <g
+            class="planet"
+            tabindex="0"
+            data-id="Geographe"
+            transform="translate(420,400)"
+          >
+            <circle
+              r="38"
+              fill="#2196f3"
+              stroke="black"
+              stroke-width="2"
+            ></circle>
+            <text x="-40" y="4" fill="white" font-size="14">Le Géographe</text>
+          </g>
+          <g
+            class="planet"
+            tabindex="0"
+            data-id="Terre"
+            transform="translate(180,360)"
+          >
+            <circle
+              r="100"
+              fill="url(#terreGradient)"
+              stroke="black"
+              stroke-width="2"
+              opacity="0.9"
+            ></circle>
+            <text x="-25" y="4" fill="white" font-size="16">La Terre</text>
+          </g>
+        </svg>
+      </section>
+
+      <section class="panel">
+        <div class="infoHead">
+          <h2 id="infoTitle">Fiche planète</h2>
+          <div class="chips" id="chips"></div>
+        </div>
+        <div class="btnRow" style="margin-bottom: 8px">
+          <button class="btn" id="prevPlanetBtn">⟵ Planète précédente</button>
+          <button class="btn" id="nextPlanetBtn">Planète suivante ⟶</button>
+        </div>
+        <div id="infoContent">
+          <p class="empty">
+            Clique une planète sur la carte pour afficher sa fiche, son rôle
+            dans l’histoire et une petite galerie d’images.
+          </p>
+          <p class="hint">
+            Astuce: N = planète suivante • P = planète précédente
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>© Projet pédagogique — M. RAZANAJATOVO A. Toavina</footer>
+  </body>
+</html>

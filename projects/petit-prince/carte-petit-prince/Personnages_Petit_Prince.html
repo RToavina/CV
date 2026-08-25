@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Le Petit Prince — Scènes et personnages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Personnages_Petit_Prince.css">
+  </head>
+
+  <body>
+    <!-- Lien Accueil (fiable sans JS) -->
+    <a id="homeBtn" href="index.html" title="Retour à l'accueil">⟵ Accueil</a>
+
+    <main>
+      <h1>Le Petit Prince — Scènes et personnages - CDFM</h1>
+      <div class="layout">
+        <section>
+          <div class="list" id="entryList"></div>
+        </section>
+        <section>
+          <div class="carousel" id="carousel" hidden>
+            <button
+              class="carBtn prev"
+              id="imgPrev"
+              aria-label="Image précédente"
+            >
+              ⟵
+            </button>
+            <img id="imgView" alt="Illustration" />
+            <button
+              class="carBtn next"
+              id="imgNext"
+              aria-label="Image suivante"
+            >
+              ⟶
+            </button>
+            <button
+              class="autoBtn"
+              id="autoToggle"
+              aria-label="Pause diaporama"
+              aria-pressed="true"
+              title="Pause (lecture auto)"
+            >
+              ❚❚
+            </button>
+            <div class="dots" id="dots"></div>
+          </div>
+
+          <article id="infoBox" hidden>
+            <h2 id="pTitle"></h2>
+            <p class="meta" id="pMeta"></p>
+            <p id="pText"></p>
+          </article>
+        </section>
+      </div>
+      <footer>© Projet pédagogique — M. RAZANAJATOVO A. Toavina</footer>
+    </main>
+
+    <script src="Personnages_Petit_Prince.js"></script>
+
+  </body>
+</html>
