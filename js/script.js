@@ -10,13 +10,19 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 const navLogo = document.querySelector('.nav__logo');
+const footerTop = document.querySelector('.footer__top');
+const scrollToTop = (event) => {
+  event.preventDefault();
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+};
+
 if (navLogo) {
-  navLogo.addEventListener('click', (event) => {
-    event.preventDefault();
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    window.scrollTo(0, 0);
-  });
+  navLogo.addEventListener('click', scrollToTop);
+}
+if (footerTop) {
+  footerTop.addEventListener('click', scrollToTop);
 }
 
 if (navToggle && navLinks) {

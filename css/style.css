@@ -205,6 +205,7 @@ button{ font-family:inherit; cursor:pointer; }
 .title-block td{ color:var(--paper); }
 .title-block--footer{ color:var(--ink-900); }
 .title-block--footer th{ color:var(--blueprint-800); background:rgba(11,37,69,.04); }
+.title-block--footer td{ color:var(--ink-900); }
 .title-block--footer th,.title-block--footer td{ border-color:#D8D2BC; }
 
 /* ==========================================================================

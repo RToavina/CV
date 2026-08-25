@@ -75,7 +75,7 @@ La page `projects/panneau-solaire/index.html` affiche les photos du dossier `ass
    `https://formspree.io/f/abcd1234`.
 4. Dans `index.html`, remplacez :
    ```html
-   <form class="contact-form" id="contactForm" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+   <form class="contact-form" id="contactForm" action="https://formspree.io/f/xgawgaok" method="POST">
    ```
    par votre propre URL.
 5. Testez le formulaire une fois le site en ligne : Formspree demande de
