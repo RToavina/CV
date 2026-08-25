@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAZANAJATOVO Andrianaivo Toavina — Enseignant AEFE de Technologie · SNT · NSI</title>
+<meta name="description" content="CV en ligne — Enseignant de Technologie, SNT et NSI au sein du réseau AEFE.">
+
+<!-- ============================================================
+     ✏️  À MODIFIER : remplacez le titre et la description ci-dessus
+     par votre nom réel et un résumé en une phrase de votre profil.
+     ============================================================ -->
+
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     BANDEAU D'AIDE — à supprimer une fois le site personnalisé.
+     Voir aussi le README.md pour la liste complète des étapes.
+     ============================================================ -->
+<div class="edit-banner" id="editBanner">
+  <p><strong>Mode édition —</strong> tous les éléments encadrés en pointillés orange (<span class="todo-inline">comme ceci</span>) doivent être remplacés par vos informations. Supprimez ce bandeau avant publication (voir README.md).</p>
+  <button type="button" id="closeBanner" aria-label="Fermer le bandeau">✕</button>
+</div>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="site-header" id="top">
+  <nav class="nav container">
+    <a class="nav__logo" href="#top">
+      <span class="nav__logo-mark">TR</span>
+      <span class="nav__logo-text todo" data-todo="Vos initiales / nom">Toavina&nbsp;R.</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#apropos"><span class="nav__num">01</span>À propos</a></li>
+      <li><a href="#competences"><span class="nav__num">02</span>Compétences</a></li>
+      <li><a href="#experience"><span class="nav__num">03</span>Parcours</a></li>
+      <li><a href="#projets"><span class="nav__num">04</span>Projets</a></li>
+      <li><a href="#contact"><span class="nav__num">05</span>Contact</a></li>
+    </ul>
+    <a class="btn btn--ghost nav__cv" href="assets/cv.pdf" download>
+      Télécharger le CV ↓
+    </a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <span class="crosshair crosshair--tl" aria-hidden="true"></span>
+  <span class="crosshair crosshair--tr" aria-hidden="true"></span>
+  <span class="crosshair crosshair--bl" aria-hidden="true"></span>
+  <span class="crosshair crosshair--br" aria-hidden="true"></span>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="eyebrow">CV — RÉF. 2026/01 · ÉCH. 1:1</p>
+      <h1 class="hero__title">
+        <span class="todo" data-todo="Prénom NOM">RAZANAJATOVO Andrianaivo Toavina</span>
+      </h1>
+      <p class="hero__role">
+        <span class="todo" data-todo="Intitulé du poste">Professeur de Technologie · SNT · NSI</span>
+      </p>
+      <p class="hero__tagline todo" data-todo="Phrase d'accroche en une ligne">
+        J'aide mes élèves à comprendre le numérique en le construisant — du circuit électronique à la ligne de code.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#contact">Me contacter</a>
+        <a class="btn btn--outline" href="assets/cv.pdf" download>Télécharger le CV (PDF) ↓</a>
+      </div>
+
+      <ul class="hero__socials">
+        <li><a class="todo" data-todo="Lien LinkedIn" href="https://www.linkedin.com/in/toavina-razanajatovo/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a class="todo" data-todo="Lien GitHub" href="https://github.com/RToavina" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a class="todo" data-todo="Adresse e-mail" href="mailto:razanajatovo.a.toavina@gmail.com">Email ↗</a></li>
+      </ul>
+    </div>
+
+    <div class="hero__aside">
+      <figure class="photo-frame">
+        <img src="assets/images/photo.jpg" alt="Photo de profil" data-fallback="Insérez votre photo ici (assets/images/photo.jpg — format carré recommandé)">
+        <figcaption class="photo-frame__caption">FIG. 1 — PORTRAIT</figcaption>
+      </figure>
+
+      <!-- SIGNATURE — cartouche façon plan technique -->
+      <table class="title-block">
+        <tbody>
+          <tr>
+            <th>Nom</th>
+            <td class="todo" data-todo="Nom complet">RAZANAJATOVO Andrianaivo Toavina</td>
+          </tr>
+          <tr>
+            <th>Fonction</th>
+            <td class="todo" data-todo="Poste actuel">Enseignant Technologie · SNT · NSI</td>
+          </tr>
+          <tr>
+            <th>Établissement</th>
+            <td class="todo" data-todo="Établissement">Collèges de France et du Monde</td>
+          </tr>
+          <tr>
+            <th>Localisation</th>
+            <td class="todo" data-todo="Ville, pays">Antananarivo, Madagascar</td>
+          </tr>
+          <tr>
+            <th>Rév.</th>
+            <td>1.0 — <span class="todo" data-todo="Mois / année">Août 2026</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="section section--paper" id="apropos">
+  <div class="container">
+    <p class="sheet-label">FEUILLE 01 — À PROPOS</p>
+    <div class="split">
+      <h2 class="section__title">Profil</h2>
+      <div class="split__body">
+        <p class="todo" data-todo="Paragraphe de présentation (4-6 lignes) : parcours, spécialités, philosophie d'enseignement">
+          Enseignant de Technologie, Sciences Numériques et Technologie (SNT) et Numérique et Sciences
+          Informatiques (NSI) au sein du réseau AEFE, j'accompagne mes élèves du collège au lycée dans
+          la découverte du monde numérique — de la conception d'objets techniques à la programmation en
+          Python. Convaincu que l'on comprend mieux ce que l'on construit soi-même, je conçois mes séances
+          autour de projets concrets et de la pédagogie par la pratique.
+        </p>
+        <ul class="fact-list">
+          <li><span class="fact-list__k">Niveaux</span><span class="fact-list__v todo" data-todo="Niveaux enseignés">Cycle 4 (5e, 4e, 3e) · Seconde · Première Spé. N.S.I.</span></li>
+          <li><span class="fact-list__k">Réseau</span><span class="fact-list__v todo" data-todo="Réseau / académie">AEFE</span></li>
+          <li><span class="fact-list__k">Langues</span><span class="fact-list__v todo" data-todo="Langues parlées">Français · Malgache · Anglais </span></li>
+          <li><span class="fact-list__k">Disponibilité</span><span class="fact-list__v todo" data-todo="Disponibilité">Rentrée 2026</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPÉTENCES ================= -->
+<section class="section" id="competences">
+  <div class="container">
+    <p class="sheet-label">FEUILLE 02 — COMPÉTENCES</p>
+    <h2 class="section__title">Nomenclature des compétences</h2>
+    <p class="section__intro todo" data-todo="Courte intro optionnelle, ou supprimez ce paragraphe">
+      Un aperçu des domaines maîtrisés, classés par famille — comme sur une nomenclature technique.
+    </p>
+
+    <div class="bom">
+      <div class="bom__group">
+        <h3 class="bom__group-title">Pédagogie & disciplines</h3>
+        <ul class="bom__list">
+          <li class="skill">
+            <span class="skill__name todo" data-todo="Compétence">Programmation Python (NSI)</span>
+            <span class="skill__bar"><span class="skill__fill" style="width:90%"></span></span>
+            <span class="skill__level">Expert</span>
+          </li>
+          <li class="skill">
+            <span class="skill__name todo" data-todo="Compétence">Conception d'objets techniques</span>
+            <span class="skill__bar"><span class="skill__fill" style="width:85%"></span></span>
+            <span class="skill__level">Expert</span>
+          </li>
+          <li class="skill">
+            <span class="skill__name todo" data-todo="Compétence">Culture numérique (SNT)</span>
+            <span class="skill__bar"><span class="skill__fill" style="width:88%"></span></span>
+            <span class="skill__level">Expert</span>
+          </li>
+          <li class="skill">
+            <span class="skill__name todo" data-todo="Compétence">Différenciation pédagogique</span>
+            <span class="skill__bar"><span class="skill__fill" style="width:75%"></span></span>
+            <span class="skill__level">Confirmé</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bom__group">
+        <h3 class="bom__group-title">Outils & techniques</h3>
+        <ul class="bom__list">
+          <li class="skill">
+            <span class="skill__name todo" data-todo="Outil">PRONOTE</span>
+            <span class="skill__bar"><span class="skill__fill" style="width:95%"></span></span>
+            <span class="skill__level">Expert</span>
+          </li>
+          <li class="skill">
+            <span class="skill__name todo" data-todo="Outil">Impression 3D & CAO</span>
+            <span class="skill__bar"><span class="skill__fill" style="width:70%"></span></span>
+            <span class="skill__level">Confirmé</span>
+          </li>
+          <li class="skill">
+            <span class="skill__name todo" data-todo="Outil">Suite bureautique / tableurs</span>
+            <span class="skill__bar"><span class="skill__fill" style="width:85%"></span></span>
+            <span class="skill__level">Expert</span>
+          </li>
+          <li class="skill">
+            <span class="skill__name todo" data-todo="Outil">Systèmes Linux / Windows</span>
+            <span class="skill__bar"><span class="skill__fill" style="width:80%"></span></span>
+            <span class="skill__level">Confirmé</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tag-cloud" aria-label="Autres compétences">
+      <span class="tag todo" data-todo="Tag">HTML / CSS</span>
+      <span class="tag todo" data-todo="Tag">Arduino</span>
+      <span class="tag todo" data-todo="Tag">Gestion de projet pédagogique</span>
+      <span class="tag todo" data-todo="Tag">Évaluation par compétences</span>
+      <span class="tag todo" data-todo="Tag">Conseil de classe</span>
+      <span class="tag todo" data-todo="Tag">Coordonnateur de l'équipe de technologie</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPÉRIENCE / FORMATION ================= -->
+<section class="section section--paper" id="experience">
+  <div class="container">
+    <p class="sheet-label">FEUILLE 03 — PARCOURS</p>
+    <h2 class="section__title">Expérience professionnelle</h2>
+
+    <ol class="trace">
+      <li class="trace__node">
+        <span class="trace__dot"></span>
+        <div class="trace__card">
+          <p class="trace__date todo" data-todo="Période">juil. 2023 - aujourd’hui</p>
+          <h3 class="trace__title todo" data-todo="Poste">Coordonnateur de l'équipe de technologie, professeur de technologie, S.N.T. & N.S.I.</h3>
+          <p class="trace__place todo" data-todo="Établissement, ville">Lycée Français de Tananarive, Antananarivo</p>
+          <ul class="trace__desc">
+            <li class="todo" data-todo="Réalisation / mission 1">Tuteur de NSI au Collèges de France et du Monde: <br> J’aide les élèves à réussir via des séances structurées (révisions, debugging, projets), des ressources claires et un suivi de progression. </li>
+            <li class="todo" data-todo="Réalisation / mission 2">Coordonnateur de la matière Technologie: <br> J’harmonise progressions et évaluations, j’accompagne l’équipe et je pilote des projets Tech (CAO/3D, micro:bit/Arduino, écoconception). Suivi par indicateurs et communication des réalisations élèves.</li>
+            <li class="todo" data-todo="Réalisation / mission 3">Technologie : <br> Conception et prototypage (CAO/3D, micro:bit/Arduino selon niveaux), démarches d’ingénierie et éco‑conception. <br> Compétences: analyse de besoins, schématisation, documentation technique, travail d’équipe.Évaluations par compétences et portfolio de réalisations.</li>
+            <li class="todo" data-todo="Réalisation / mission 3">SNT (Sciences Numériques et Technologie) : <br> Culture numérique (web HTML/CSS, données/visualisation, réseaux, cybersécurité de base). <br> Thèmes: géolocalisation, images, objets connectés, IA responsable et usages raisonnés. <br> Projets courts, activités débranchées et outils en ligne (Replit/Jupyter selon contexte).</li>
+            <li class="todo" data-todo="Réalisation / mission 3">SI – Sciences intégrées : <br> Démarche scientifique: observer, questionner, expérimenter, mesurer et communiquer. <br> Notions clés: matière et états, énergie et changements, forces et mouvements, biodiversité et environnement, objets techniques du quotidien. <br> Sécurité et rigueur au labo; traces écrites, schémas, tableaux de mesures; mini‑projets interdisciplinaires (SVT/Physique‑Chimie/Techno).</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="trace__node">
+        <span class="trace__dot"></span>
+        <div class="trace__card">
+          <p class="trace__date todo" data-todo="Période">nov. 2022 - juin 2023 · 8 mois</p>
+          <h3 class="trace__title todo" data-todo="Poste précédent">Professeur vacataire</h3>
+          <p class="trace__place todo" data-todo="Établissement, ville">Lycée Français de Tananarive , Antananarivo</p>
+          <ul class="trace__desc">
+            <li class="todo" data-todo="Réalisation / mission"> Professeur vacataire assurant les remplacements en S.N.T. et technologie </li>           
+          </ul>
+        </div>
+      </li>
+
+      <li class="trace__node">
+        <span class="trace__dot"></span>
+        <div class="trace__card">
+          <p class="trace__date todo" data-todo="Période">nov. 2022 - juin 2023 · 8 mois</p>
+          <h3 class="trace__title todo" data-todo="Poste précédent">Professeur de Technologie | S.N.T. | M.S.G.N.</h3>
+          <p class="trace__place todo" data-todo="Établissement, ville">École HIBISCUS , Antananarivo</p>
+          <ul class="trace__desc">
+            <li class="todo" data-todo="Réalisation / mission">Technologie <br>
+              Conception et prototypage: CAO/Impression 3D, microbit/Arduino, objets connectés et écoconception. <br>  
+              Compétences: analyse de besoins, schémas/diagrammes, documentation technique, travail d’équipe et évaluation par compétences. <br> 
+              Projets concrets alignés sur les programmes; portfolio de réalisations. <br> </li>
+            <li class="todo" data-todo="Réalisation / mission">SNT (Sciences Numériques et Technologie) <br>
+              Culture numérique: web (HTML/CSS), données/visualisation, réseaux, cybersécurité de base, IA responsable.  <br>
+              Méthodes: projets courts, activités débranchées, usages raisonné des outils numériques (Replit/Jupyter, Tinkercad…).  <br>
+              Compétences: esprit critique face à l’info, RGPD en classe, collaboration en ligne.</li>
+            <li class="todo" data-todo="Réalisation / mission">MSGN (Management, sciences de gestion et numérique) <br>
+              Management et SGN: processus de gestion (RH, marketing, compta/finance), organisation et RSE. <br>
+              Numérique appliqué: tableur avancé, data visualisation, bases de données/PGI (ERP) en initiation, outils collaboratifs (Drive/Office 365, Trello/Notion). <br>
+              Compétences: analyse de données pour décider, communication professionnelle, gestion de projet, sensibilisation au droit du numérique.</li>            
+          </ul>
+        </div>
+      </li>
+
+      <li class="trace__node">
+        <span class="trace__dot"></span>
+        <div class="trace__card">
+          <p class="trace__date todo" data-todo="Période">févr. 2021 - nov. 2022 · 1 an 10 mois</p>
+          <h3 class="trace__title todo" data-todo="Poste précédent">IT</h3>
+          <p class="trace__place todo" data-todo="Établissement, ville">B.I.R.D., Ambohimiandra</p>
+          <ul class="trace__desc">
+            <li class="todo" data-todo="Réalisation / mission">Support technique : Aider les utilisateurs en cas de panne de matériel ou de logiciel.</li>
+            <li class="todo" data-todo="Réalisation / mission">Gestion des réseaux : Installer et maintenir les serveurs, le Wi-Fi et les connexions.</li>
+            <li class="todo" data-todo="Réalisation / mission">Cybersécurité : Protéger les données contre les pirates et les virus.</li>            
+            <li class="todo" data-todo="Réalisation / mission">Maintenance : Mettre à jour les programmes et s'assurer que tout fonctionne sans coupure. </li>            
+          </ul>
+        </div>
+      </li>
+
+      <li class="trace__node">
+        <span class="trace__dot"></span>
+        <div class="trace__card">
+          <p class="trace__date todo" data-todo="Période">juin 2019 - août 2019 · 3 mois</p>
+          <h3 class="trace__title todo" data-todo="Poste précédent">Stagiaire en développement Web</h3>
+          <p class="trace__place todo" data-todo="Établissement, ville">MAD'COM S.a.r.l Madagascar, Antananarivo</p>
+          <ul class="trace__desc">
+            <li class="todo" data-todo="Réalisation / mission">Numerisation de documents via OCR</li>
+            <li class="todo" data-todo="Réalisation / mission">Manipulation de données et création de rapports</li>
+            <li class="todo" data-todo="Réalisation / mission">Création de scripts python pour l'automatisation des tâches</li>
+          </ul>
+        </div>
+      </li>
+
+
+
+    <h2 class="section__title section__title--spaced">Formation</h2>
+    <ol class="trace">
+      <li class="trace__node">
+        <span class="trace__dot"></span>
+        <div class="trace__card">
+          <p class="trace__date todo" data-todo="Année d'obtention">2025 - 2026</p>
+          <h3 class="trace__title todo" data-todo="Diplôme">Attestation de formation — CRÉATION, MODÉLISATION ET IMPRESSION 3D</h3>
+          <p class="trace__place todo" data-todo="Établissement">Agence pour l'Enseignement Français à l'Etranger</p>
+          <ul class="trace__desc">
+            <li class="todo" data-todo="Réalisation / mission">Présentation des différentes technologies d'impression 3D</li>
+            <li class="todo" data-todo="Réalisation / mission">Mise en œuvre des outils de modélisation 3D : modeleurs volumiques et logiciels de tranchage pour impression 3D.</li>
+            <li class="todo" data-todo="Réalisation / mission">Pratiquer l’ensemble de la chaîne numérique 3D, de l’idée initiale à l’objet fabriqué.</li>
+            <li class="todo" data-todo="Réalisation / mission">Maitriser la mise en œuvre et la maintenance d'une imprimante 3D.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="trace__node">
+        <span class="trace__dot"></span>
+        <div class="trace__card">
+          <p class="trace__date todo" data-todo="Année d'obtention">2024 - 2025</p>
+          <h3 class="trace__title todo" data-todo="Diplôme">Openbadge mention "Se former pour faire évoluer ses pratiques" niveau "Acteur"</h3>
+          <p class="trace__place todo" data-todo="Établissement">Agence pour l'Enseignement Français à l'Etranger</p>
+          <ul class="trace__desc">
+            <li class="todo" data-todo="Réalisation / mission">Intégration des attendus du système éducatif français dans son enseignement.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="trace__node">
+        <span class="trace__dot"></span>
+        <div class="trace__card">
+          <p class="trace__date todo" data-todo="Année d'obtention">2023 - 2024</p>
+          <h3 class="trace__title todo" data-todo="Diplôme">Openbadge mention "Se former pour faire évoluer ses pratiques" niveau "Explorateur"</h3>
+          <p class="trace__place todo" data-todo="Établissement">Agence pour l'Enseignement Français à l'Etranger</p>
+          <ul class="trace__desc">
+            <li class="todo" data-todo="Réalisation / mission">Intégration des attendus du système éducatif français dans son enseignement.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="trace__node">
+        <span class="trace__dot"></span>
+        <div class="trace__card">
+          <p class="trace__date todo" data-todo="Année d'obtention">2021 – 2022</p>
+          <h3 class="trace__title todo" data-todo="Diplôme">Master Informatique mention Mobiquité Base de Données et intégration Système (M.B.D.S.)</h3>
+          <p class="trace__place todo" data-todo="Établissement">Université Côte d’Azur</p>
+          <ul class="trace__desc">
+            <li class="todo" data-todo="Réalisation / mission"> Bases de données avancées et infostructures : <br> Les concepts de base et infostructures en informatique d’entreprise <br> Bases de données avancées (OR et OO) et standards (SQL3, ODMG)  <br> Administration avancée, optimisation (« tuning ») d’un serveur de données relationnelles/ objets  <br> Datawarehouse, DataMining et CRM </li>
+            <li class="todo" data-todo="Réalisation / mission"> Serveurs d’applications et environnements de développement : <br> Serveurs d’applications (y compris mobile) et environnement de développement J2EE  <br> Java avancé (EJB, JSP, J2EE, Java embarqué, java Multimedia,..), Apache jdevelopper, framework STRUTS, plateforme J2EE et serveur d’applications sans fils <br> Architecture N-tier et middleware objet : XML et services WEB (SOAP,UDDI ,WSDL), Web 2.0 (Ajax, …) <br> Serveurs d’applications (y compris mobile) et environnement de développement .NET</li>
+            <li class="todo" data-todo="Réalisation / mission"> Systèmes d’Information mobiquitaires : <br>MOBIQUITE « Services d’informations réseaux mobiles et objets communicants », développement d’applications sur smart phone – Architecture 5 niveaux des SI Mobiquitaires Tags (QR Code, NFC), Transmedia, BIG DATA et Réalité augmentée : 6H <br> Concepts des réseaux mobiles et haut débit (IPV6, Wimax, Zigbee, Wavenis, …) <br> Développement d’applications NFC (avec TSM et OTA) <br> Environnement de développement sur ANDROID <br> Environnement de développement sur I-Phone/IOS</li>
+            <li class="todo" data-todo="Réalisation / mission"> Conception avancée, gestion de projets et séminaires : <br> Conception avancée autour d’UML <br> Concepts progiciels et intégration d’applications : ERP et EAI <br> Gestion de projets et Conception AGILE</li>        
+          </ul>
+        </div>
+      </li>
+
+      <li class="trace__node">
+        <span class="trace__dot"></span>
+        <div class="trace__card">
+          <p class="trace__date todo" data-todo="Année d'obtention">2017 - 2020</p>
+          <h3 class="trace__title todo" data-todo="Diplôme">Licence de Sciences, Technologie, Santé Mention Informatique</h3>
+          <p class="trace__place todo" data-todo="Établissement">Université de Toulouse</p>
+          <ul class="trace__desc">
+            <li class="todo" data-todo="Réalisation / mission"> Méthodologie de développement logiciel/Génie logiciel : <br> Vérification, analyse de complexité, sécurité <br> Structures de données, types abstraits <br> Conception orientée-objet, validation, tests</li>
+            <li class="todo" data-todo="Réalisation / mission"> Fonctionnement de l'ordinateur et de son environnement : <br> Architecture des machines <br> Réseaux informatiques <br> Systèmes d'exploitation</li>
+            <li class="todo" data-todo="Réalisation / mission"> Langages de programmation : <br> Python, C, Java, CamL, SQL </li>
+            <li class="todo" data-todo="Réalisation / mission"> Structures discrètes et algorithmes : <br> Algorithmique, logique, théorie de l'information, théorie des langages, théorie et algorithmique des graphes, probabilités/statistiques, arithmétique, algèbre linéaire, méthodes numériques</li>        
+            <li class="todo" data-todo="Réalisation / mission"> Bases de données, Interaction Homme-machine, Intelligence artificielle, Informatique graphique, Programmation parallèle</li>   
+            <li class="todo" data-todo="Réalisation / mission"> Techniques de gestion de projet et outils de travail collaboratif</li>     
+            <li class="todo" data-todo="Réalisation / mission"> Langue vivante (anglais)</li>     
+          </ul>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<!-- ================= PROJETS ================= -->
+<section class="section" id="projets">
+  <div class="container">
+    <p class="sheet-label">FEUILLE 04 — PROJETS</p>
+    <h2 class="section__title">Projets pédagogiques</h2>
+    <p class="section__intro">Une sélection de projets menés avec mes classes — reconductibles d'une année sur l'autre.</p>
+
+    <div class="cards">
+      <article class="card">
+        <p class="card__ref">PRJ-01</p>
+        <h3 class="card__title todo" data-todo="Titre du projet">Projet interdisciplinaire « Le Petit Prince »</h3>
+        <p class="card__desc todo" data-todo="Description (2-3 lignes)">
+          Conception et fabrication d'objets techniques en lien avec l'œuvre, en collaboration avec
+          les enseignants de Lettres — de l'idée au prototype imprimé en 3D.
+        </p>
+        <div class="card__tags">
+          <span class="tag tag--sm todo" data-todo="Tag">Interdisciplinaire</span>
+          <span class="tag tag--sm todo" data-todo="Tag">Impression 3D</span>
+        </div>
+        <a class="card__link todo" data-todo="Lien vers le projet (ou supprimez)" href="#">Voir le projet ↗</a>
+      </article>
+
+      <article class="card">
+        <p class="card__ref">PRJ-02</p>
+        <h3 class="card__title todo" data-todo="Titre du projet">Éclairage solaire autonome</h3>
+        <p class="card__desc todo" data-todo="Description (2-3 lignes)">
+          Étude, dimensionnement et réalisation d'un système d'éclairage photovoltaïque par les élèves
+          de 3e, dans une démarche de projet complète.
+        </p>
+        <div class="card__tags">
+          <span class="tag tag--sm todo" data-todo="Tag">Énergie</span>
+          <span class="tag tag--sm todo" data-todo="Tag">Technologie 3e</span>
+        </div>
+        <a class="card__link todo" data-todo="Lien vers le projet (ou supprimez)" href="#">Voir le projet ↗</a>
+      </article>
+
+      <article class="card">
+        <p class="card__ref">PRJ-03</p>
+        <h3 class="card__title todo" data-todo="Titre du projet">Semaine de sensibilisation à l'IA</h3>
+        <p class="card__desc todo" data-todo="Description (2-3 lignes)">
+          Organisation d'ateliers transversaux pour initier les élèves aux enjeux et au fonctionnement
+          de l'intelligence artificielle.
+        </p>
+        <div class="card__tags">
+          <span class="tag tag--sm todo" data-todo="Tag">IA</span>
+          <span class="tag tag--sm todo" data-todo="Tag">Sensibilisation</span>
+        </div>
+        <a class="card__link todo" data-todo="Lien vers le projet (ou supprimez)" href="#">Voir le projet ↗</a>
+      </article>
+
+      <article class="card card--ghost">
+        <p class="todo" data-todo="Dupliquez le bloc <article class='card'> pour ajouter un projet, puis supprimez cette carte fantôme.">
+          + Dupliquez une carte « card » dans le code pour ajouter un projet.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section section--dark" id="contact">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="container">
+    <p class="sheet-label sheet-label--light">FEUILLE 05 — CONTACT</p>
+    <div class="split split--contact">
+      <div>
+        <h2 class="section__title section__title--light">Discutons</h2>
+        <p class="section__intro section__intro--light todo" data-todo="Phrase d'invitation au contact">
+          Une question, une opportunité de poste, ou simplement l'envie d'échanger sur la pédagogie
+          numérique ? N'hésitez pas à m'écrire.
+        </p>
+        <ul class="contact-info">
+          <li><span>Email</span><a class="todo" data-todo="Adresse e-mail" href="mailto:votre.email@exemple.com">votre.email@exemple.com</a></li>
+          <li><span>Téléphone</span><a class="todo" data-todo="Numéro de téléphone (optionnel)" href="tel:+261000000000">+261 00 000 0000</a></li>
+          <li><span>Localisation</span><span class="todo" data-todo="Ville, pays">Antananarivo, Madagascar</span></li>
+        </ul>
+      </div>
+
+      <!-- ==========================================================
+           FORMULAIRE — voir README.md « Rendre le formulaire
+           fonctionnel » : GitHub Pages ne peut pas exécuter de code
+           serveur, ce formulaire doit être relié à un service comme
+           Formspree (gratuit, aucune installation) pour envoyer les
+           messages vers votre boîte mail.
+           ========================================================== -->
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+        <div class="field">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Envoyer le message</button>
+        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <table class="title-block title-block--footer">
+      <tbody>
+        <tr>
+          <th>Nom</th>
+          <td class="todo" data-todo="Nom complet">Toavina Rakoto</td>
+        </tr>
+        <tr>
+          <th>Doc.</th>
+          <td>CV — Rev. 1.0</td>
+        </tr>
+        <tr>
+          <th>Dernière MAJ</th>
+          <td class="todo" data-todo="Date de mise à jour">Août 2026</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="footer__copy">© <span id="year"></span> — Site conçu et déployé sur GitHub Pages.</p>
+    <a class="footer__top" href="#top">Haut de page ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
