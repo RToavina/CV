@@ -64,8 +64,8 @@ La page `projet-panneau-solaire.html` affiche les photos du dossier `IMG/Projet 
 1. Placez votre photo (idéalement carrée, ≥ 500×500 px) dans
    `assets/images/photo.jpg`. Si le fichier est absent, le site affiche
    automatiquement un cadre "à remplacer" plutôt qu'une image cassée.
-2. Placez votre CV au format PDF dans `assets/cv.pdf` (même nom de fichier,
-   sinon mettez à jour les liens `href="assets/cv.pdf"` dans `index.html`).
+2. Placez votre CV au format PDF dans le dossier `PDF/`. Le CV actuellement
+   utilisé par les boutons de téléchargement est `PDF/CV_RAZANAJATOVO_A_Toavina.pdf`.
 
 ## 4. Rendre le formulaire de contact fonctionnel (Formspree)
 
@@ -132,7 +132,7 @@ portfolio-cv/
 │   └── carte-petit-prince/                        → pages HTML du projet
 ├── Projet_appréciation/                            → projet personnel
 │   └── appreciation.html                           → banque d'appréciations
-├── assets/                                         → photo et CV PDF, si ajoutés
+├── PDF/                                            → CV au format PDF
 └── README.md                                       → ce guide
 ```
 

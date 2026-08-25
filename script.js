@@ -6,13 +6,6 @@
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// --- Bandeau "mode édition" (fermeture) ---
-const editBanner = document.getElementById('editBanner');
-const closeBanner = document.getElementById('closeBanner');
-if (closeBanner && editBanner) {
-  closeBanner.addEventListener('click', () => editBanner.classList.add('is-hidden'));
-}
-
 // --- Menu mobile ---
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
