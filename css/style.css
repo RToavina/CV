@@ -120,6 +120,7 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .hero__grid{
   position:absolute; inset:0;
+  pointer-events:none;
   background-image:
     linear-gradient(var(--grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
@@ -214,6 +215,7 @@ button{ font-family:inherit; cursor:pointer; }
 .section{ padding-block:88px; }
 .section--paper{ background:var(--paper-dim); }
 .section--dark{ background:var(--blueprint-900); color:var(--paper); position:relative; overflow:hidden; }
+.section--dark .container{ position:relative; z-index:1; }
 .section--dark .hero__grid{ mask-image:linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); }
 
 .sheet-label{
