@@ -389,11 +389,15 @@ button{ font-family:inherit; cursor:pointer; }
 .card:nth-child(2){ transition-delay:.08s; }
 .card:nth-child(3){ transition-delay:.16s; }
 .card:nth-child(4){ transition-delay:.24s; }
-html.js-enabled .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1); }
-.reveal.is-visible{ opacity:1; transform:translateY(0); }
+.reveal{ opacity:1; transform:none; }
+.reveal.is-visible{ animation:reveal-enter .6s cubic-bezier(.22,1,.36,1) both; }
 
 @keyframes hero-enter{
   from{ opacity:0; transform:translateY(24px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+@keyframes reveal-enter{
+  from{ opacity:.35; transform:translateY(18px); }
   to{ opacity:1; transform:translateY(0); }
 }
 
