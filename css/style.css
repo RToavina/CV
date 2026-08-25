@@ -182,7 +182,6 @@ button{ font-family:inherit; cursor:pointer; }
   color:var(--cyan-100); font-family:var(--font-mono); font-size:.78rem;
   padding:20px;
 }
-.photo-frame img:not(.img-missing) ~ *{ }
 .photo-frame__caption{
   font-family:var(--font-mono); font-size:.7rem; color:var(--cyan-300);
   text-align:center; margin-top:8px; letter-spacing:.06em;

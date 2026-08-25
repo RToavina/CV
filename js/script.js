@@ -9,6 +9,16 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 // --- Menu mobile ---
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
+const navLogo = document.querySelector('.nav__logo');
+if (navLogo) {
+  navLogo.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    window.scrollTo(0, 0);
+  });
+}
+
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
     const nav = navToggle.closest('.nav');

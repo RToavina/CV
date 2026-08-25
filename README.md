@@ -51,21 +51,21 @@ La section **Projets pédagogiques** présente actuellement :
 
 La section **Projets personnels** contient :
 
-- **PRJ-PERSO-01 — Banque d'appréciations** : application web disponible dans `Projet_appréciation/appreciation.html`.
+- **PRJ-PERSO-01 — Banque d'appréciations** : application web disponible dans `projects/appreciation/appreciation.html`.
 
 Les liens des projets qui disposent d'une page dédiée s'ouvrent dans un nouvel onglet avec `target="_blank"` et `rel="noopener"`.
 
 ### Galerie du projet panneau solaire
 
-La page `projet-panneau-solaire.html` affiche les photos du dossier `IMG/Projet panneau solaire/` sous forme de carrousel. Pour ajouter une photo, placez un fichier `.jpg` dans ce dossier et ajoutez son nom dans le tableau `photos` de la page.
+La page `projects/panneau-solaire/index.html` affiche les photos du dossier `assets/images/panneau-solaire/` sous forme de carrousel. Pour ajouter une photo, placez un fichier `.jpg` dans ce dossier et ajoutez son nom dans le tableau `photos` de la page.
 
 ## 3. Ajouter votre photo et votre CV en PDF
 
 1. Placez votre photo (idéalement carrée, ≥ 500×500 px) dans
    `assets/images/photo.jpg`. Si le fichier est absent, le site affiche
    automatiquement un cadre "à remplacer" plutôt qu'une image cassée.
-2. Placez votre CV au format PDF dans le dossier `PDF/`. Le CV actuellement
-   utilisé par les boutons de téléchargement est `PDF/CV_RAZANAJATOVO_A_Toavina.pdf`.
+2. Placez votre CV au format PDF dans le dossier `assets/pdf/`. Le CV actuellement
+   utilisé par les boutons de téléchargement est `assets/pdf/CV_RAZANAJATOVO_A_Toavina.pdf`.
 
 ## 4. Rendre le formulaire de contact fonctionnel (Formspree)
 
@@ -123,16 +123,17 @@ disponible directement à la racine de ce domaine, sans `/mon-cv/` à la fin.
 ```
 portfolio-cv/
 ├── index.html                                      → contenu du CV et des projets
-├── style.css                                       → design du CV
-├── script.js                                       → menu mobile, formulaire et animations
-├── projet-panneau-solaire.html                     → galerie du PRJ-02
-├── IMG/Projet panneau solaire/                     → photos du PRJ-02
-├── Projet Petit Prince/                            → projet pédagogique PRJ-01
-│   ├── Projet Petit Prince.mblock                 → jeu Scratch
-│   └── carte-petit-prince/                        → pages HTML du projet
-├── Projet_appréciation/                            → projet personnel
-│   └── appreciation.html                           → banque d'appréciations
-├── PDF/                                            → CV au format PDF
+├── css/style.css                                   → design du CV
+├── js/script.js                                    → menu mobile, formulaire et animations
+├── assets/
+│   ├── images/panneau-solaire/                     → photos du PRJ-02
+│   └── pdf/CV_RAZANAJATOVO_A_Toavina.pdf          → CV au format PDF
+├── projects/
+│   ├── petit-prince/                               → projet pédagogique PRJ-01
+│   │   ├── projet-petit-prince.mblock              → jeu Scratch
+│   │   └── carte-petit-prince/                     → pages HTML du projet
+│   ├── panneau-solaire/index.html                  → galerie du PRJ-02
+│   └── appreciation/appreciation.html              → projet personnel
 └── README.md                                       → ce guide
 ```
 

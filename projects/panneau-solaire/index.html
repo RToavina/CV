@@ -60,7 +60,7 @@
     function showPhoto(index) {
       current = (index + photos.length) % photos.length;
       const name = photos[current];
-      const src = `IMG/Projet panneau solaire/${name}`;
+      const src = `../../assets/images/panneau-solaire/${name}`;
       photo.src = src;
       photo.alt = `Photo ${current + 1} du projet éclairage solaire autonome`;
       filename.textContent = name;
@@ -70,7 +70,7 @@
     photos.forEach((name, index) => {
       const button = document.createElement('button');
       button.className = 'thumb'; button.type = 'button'; button.setAttribute('aria-label', `Afficher la photo ${index + 1}`);
-      const image = document.createElement('img'); image.src = `IMG/Projet panneau solaire/${name}`; image.alt = '';
+      const image = document.createElement('img'); image.src = `../../assets/images/panneau-solaire/${name}`; image.alt = '';
       button.append(image); button.addEventListener('click', () => showPhoto(index)); thumbs.append(button);
     });
     document.querySelector('.nav--prev').addEventListener('click', () => showPhoto(current - 1));
