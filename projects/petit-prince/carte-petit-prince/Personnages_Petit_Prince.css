@@ -156,3 +156,10 @@ h1 {
   outline: 2px solid #8fb0ff;
   outline-offset: 2px;
 }
+
+@media (max-width: 560px) {
+  main { margin: 16px auto; padding: 0 10px; }
+  .carousel { grid-template-columns: 38px 1fr 38px; min-height: 240px; padding: 6px; }
+  .carBtn { width: 36px; height: 36px; font-size: 16px; }
+  #homeBtn { top: 8px; left: 8px; padding: 7px 9px; font-size: 13px; }
+}

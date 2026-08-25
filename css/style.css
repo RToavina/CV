@@ -377,8 +377,19 @@ button{ font-family:inherit; cursor:pointer; }
   .footer__copy{ margin-left:0; }
 }
 @media (max-width: 600px){
+  .container{ padding-inline:16px; }
   .cards{ grid-template-columns:1fr; }
   .hero{ padding-block:56px 72px; }
+  .hero__title{ font-size:clamp(2rem, 11vw, 3rem); }
+  .hero__actions,.card__actions{ align-items:stretch; }
+  .hero__actions .btn,.card__button{ width:100%; text-align:center; }
+  .photo-frame img{ max-width:100%; }
+  .fact-list li{ align-items:flex-start; flex-direction:column; gap:4px; }
+  .fact-list__v{ text-align:left; }
+  .contact-form{ padding:20px 16px; }
+  .footer__inner{ align-items:stretch; flex-direction:column; gap:20px; }
+  .footer__copy{ margin-left:0; }
+  .title-block--footer{ max-width:none; }
 }
 
 /* ==========================================================================

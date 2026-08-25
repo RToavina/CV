@@ -167,6 +167,15 @@ main {
   }
 }
 
+@media (max-width: 560px) {
+  main { padding: 10px; }
+  .panel { padding: 12px; }
+  .grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 24px; }
+  .themeRow { width: 100%; justify-content: space-between; }
+  .sel { max-width: 150px; }
+}
+
 .card {
   min-width: 0;
   border: 1px solid var(--line);
