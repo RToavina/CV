@@ -167,7 +167,8 @@ button{ font-family:inherit; cursor:pointer; }
   padding:10px; position:relative; background:rgba(255,255,255,.03);
 }
 .photo-frame img{
-  width:100%; aspect-ratio:1/1; object-fit:cover;
+  width:100%; max-width:370px; aspect-ratio:3/4; object-fit:cover;
+  object-position:center 30%; margin-inline:auto;
   background:var(--blueprint-800);
 }
 .photo-frame img.img-missing{ opacity:0; height:0; }
