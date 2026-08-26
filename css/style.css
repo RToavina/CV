@@ -233,6 +233,7 @@ button{ font-family:inherit; cursor:pointer; }
 .section__intro--light{ color:var(--cyan-100); }
 
 .split{ display:grid; grid-template-columns:.6fr 1fr; gap:56px; align-items:start; }
+.split > *{ min-width:0; }
 .split__body p{ max-width:62ch; font-size:1.02rem; color:var(--ink-600); }
 
 /* Liste de faits (À propos) */
@@ -333,20 +334,20 @@ button{ font-family:inherit; cursor:pointer; }
 .contact-info{ margin-top:30px; display:flex; flex-direction:column; gap:14px; }
 .contact-info li{ display:flex; gap:16px; font-family:var(--font-mono); font-size:.9rem; }
 .contact-info span:first-child{ color:var(--cyan-300); width:110px; flex:none; }
-.contact-info a{ color:var(--paper); border-bottom:1px solid rgba(255,255,255,.25); }
+.contact-info a{ color:var(--paper); border-bottom:1px solid rgba(255,255,255,.25); overflow-wrap:anywhere; }
 .contact-info a:hover{ border-color:var(--cyan-300); }
 
 .contact-form{
   background:rgba(255,255,255,.04); border:1px solid rgba(142,202,230,.3);
-  border-radius:var(--radius); padding:28px;
+  width:100%; max-width:100%; border-radius:var(--radius); padding:28px;
   display:flex; flex-direction:column; gap:18px;
 }
-.field{ display:flex; flex-direction:column; gap:8px; }
+.field{ display:flex; flex-direction:column; gap:8px; min-width:0; }
 .field label{ font-family:var(--font-mono); font-size:.78rem; color:var(--cyan-100); }
 .field input,.field textarea{
   background:rgba(255,255,255,.06); border:1px solid rgba(142,202,230,.35);
   border-radius:3px; padding:11px 12px; color:var(--paper); font-family:var(--font-body);
-  font-size:.95rem; resize:vertical;
+  width:100%; max-width:100%; min-width:0; font-size:.95rem; resize:vertical;
 }
 .field input:focus,.field textarea:focus{ border-color:var(--amber-500); }
 .form__status{ font-family:var(--font-mono); font-size:.8rem; color:var(--cyan-100); min-height:1em; }
